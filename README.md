@@ -33,6 +33,7 @@ in/
  ├─ floor/aged-ceramic-tiles.png
  └─ wall/painted-plaster.png
 
+
 out/
  ├─ floor/aged-ceramic-tiles_albedo.png
  │                     _height.png
