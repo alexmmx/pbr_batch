@@ -23,25 +23,39 @@ Preserves seamless tiling using wrap-padding. Supports ZIP export.
 
 ## 📦 Installation
 
-Requires **Python 3.9+** (tested on Linux, MacOS, Windows WSL).  
+Requires **Python 3.9+** (tested on Linux, MacOS, Windows WSL). 
+
 numpy==1.26.4
+
 opencv-python-headless==4.9.0.80
 
 
 Folder structure
+
 in/
+
  ├─ floor/aged-ceramic-tiles.png
+ 
  └─ wall/painted-plaster.png
 
 
+
 out/
+
  ├─ floor/aged-ceramic-tiles_albedo.png
+ 
  │                     _height.png
+ 
  │                     _normal.png
+ 
  │                     _roughness.png
+ 
  │                     _ao.png
+ 
  │                     _metallic.png
+ 
  │                     _ORM.png
+ 
  └─ wall/painted-plaster_*.png
 
 
