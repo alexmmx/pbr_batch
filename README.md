@@ -3,6 +3,8 @@
 Batch-generate **PBR texture maps** (Albedo, Height, Normal, Roughness, AO, Metallic, ORM) from **seamless PNG textures**.  
 Preserves seamless tiling using wrap-padding. Supports ZIP export.
 
+From https://aitextured.com
+
 ---
 
 ## ✨ Features
@@ -90,5 +92,8 @@ python3 pbr_batch.py -i ./in -o ./out \
   --roughness-contrast 1.3 \
   --ao-strength 1.5 \
   --pack-orm
+
+
+
 
 
