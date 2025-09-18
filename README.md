@@ -24,6 +24,25 @@ Preserves seamless tiling using wrap-padding. Supports ZIP export.
 ## 📦 Installation
 
 Requires **Python 3.9+** (tested on Linux, MacOS, Windows WSL).  
+numpy==1.26.4
+opencv-python-headless==4.9.0.80
+
+
+Folder structure
+in/
+ ├─ floor/aged-ceramic-tiles.png
+ └─ wall/painted-plaster.png
+
+out/
+ ├─ floor/aged-ceramic-tiles_albedo.png
+ │                     _height.png
+ │                     _normal.png
+ │                     _roughness.png
+ │                     _ao.png
+ │                     _metallic.png
+ │                     _ORM.png
+ └─ wall/painted-plaster_*.png
+
 
 ```bash
 # Clone or copy repo
@@ -40,4 +59,21 @@ pip install -r requirements.txt
 
 # Verify
 python -c "import numpy, cv2; print('numpy:', numpy.__version__, 'opencv:', cv2.__version__)"
+Usage 
+Basic Run:
+python3 pbr_batch.py -i ./in -o ./out
+
+Generate ORM + ZIP results:
+python3 pbr_batch.py -i ./in -o ./out --pack-orm --zip-results
+
+Separate ZIP per subfolder:
+python3 pbr_batch.py -i ./in -o ./out --pack-orm --zip-results --zip-per-folder
+
+Tune intensities:
+python3 pbr_batch.py -i ./in -o ./out \
+  --normal-strength 4.0 \
+  --roughness-contrast 1.3 \
+  --ao-strength 1.5 \
+  --pack-orm
+
 
